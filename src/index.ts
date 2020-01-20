@@ -1,12 +1,7 @@
 import { ActionReducer, MetaReducer } from "@ngrx/store";
 
-
-declare global {
-  interface Window { middleware: any; }
-}
-
-if(!window.middleware) {
-  window.middleware = logState;
+if(!window['middleware']) {
+  window['middleware'] = logState;
 }
 
 function logState(reducer: ActionReducer<any>): ActionReducer<any> {
@@ -14,6 +9,6 @@ function logState(reducer: ActionReducer<any>): ActionReducer<any> {
       console.log(state);
       return reducer(state, action);
     };
-  }
+  };
 
-export const customReducer = window.middleware as MetaReducer<any>;
+export const customReducer = window['middleware'];
