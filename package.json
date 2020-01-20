@@ -1,6 +1,6 @@
 {
   "name": "@suraj_dev/re-logger",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A Basic redux Middleware",
   "main": "./dist/index.js",
   "scripts": {
