@@ -1,6 +1,19 @@
+import { ActionReducer } from "@ngrx/store";
 
-export const customMiddleWare = (reducer) => (state, action) => {
-    console.log('action',action);
-    console.log('state',state);
-    return reducer(state, action)
-};
+
+declare global {
+  interface Window { middleware: any; }
+}
+
+if(!window.middleware) {
+  window.middleware = logState;
+}
+
+function logState(reducer: ActionReducer<any>): ActionReducer<any> {
+    return function(state, action) {
+      console.log(state);
+      return reducer(state, action);
+    };
+  }
+
+export const customReducer = window.middleware;
