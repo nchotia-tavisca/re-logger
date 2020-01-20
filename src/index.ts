@@ -1,4 +1,4 @@
-import { ActionReducer } from "@ngrx/store";
+import { ActionReducer, MetaReducer } from "@ngrx/store";
 
 
 declare global {
@@ -16,4 +16,4 @@ function logState(reducer: ActionReducer<any>): ActionReducer<any> {
     };
   }
 
-export const customReducer = window.middleware;
+export const customReducer = window.middleware as MetaReducer<any>;

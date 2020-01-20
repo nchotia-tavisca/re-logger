@@ -1,6 +1,6 @@
 {
   "name": "@suraj_dev/re-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Basic redux Middleware",
   "main": "./dist/index.js",
   "scripts": {
@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@angular/core": "^2.4.7",
-    "@ngrx/core": "^1.2.0",
     "@ngrx/store": "^2.2.1",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.35.0",
@@ -40,6 +39,9 @@
     "typescript": "^2.1.4",
     "rxjs": "^5.4.0",
     "zone.js": "^0.7.7"
+  },
+  "dependencies": {
+    "@ngrx/store": "^6.0.0"
   },
   "typings": "./dist/index.d.ts"
 }
